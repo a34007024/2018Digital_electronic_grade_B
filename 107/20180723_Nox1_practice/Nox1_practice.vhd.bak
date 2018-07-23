@@ -11,22 +11,7 @@ Entity Nox1_practice is
 End Nox1_practice;
 --------------------------------------
 Architecture A of Nox1_practice is
-	signal S1,S2:std_logic;
-begin
-	---------------------------
-	process()
-		
+
 	begin
-		
-	end process;
-	
-	
+
 end;
-
-
-
-
-
-
-
-
