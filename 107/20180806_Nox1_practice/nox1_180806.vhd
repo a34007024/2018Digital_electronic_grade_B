@@ -1,0 +1,86 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+Use	IEEE.std_logic_unsigned.all;
+
+Entity nox1_180806 is
+	Port(
+		GCKP43,P2CK1,P3S1,P4CK2:in std_logic;
+		DCBA:out integer range 0 to 9;
+		ba:out integer range 0 to 3);
+End nox1_180806;
+
+Architecture Main of nox1_180806 is
+	--==========Signal宣告區=============
+	Signal CK1,CK2:std_logic;
+	Signal N3,N2,N1,N0:integer range 0 to 9;
+	Signal S:integer range 0 to 3;
+	Signal CLR:std_logic_vector(1 downto 0);
+	--CLR為了防雜訊所以宣告成兩位元
+	--==========Signal宣告區=============
+begin
+
+	Process(GCKP43)
+	begin
+		--在偵測到系統脈波時接收輸入訊號
+		If Rising_Edge(GCKP43)	Then --偵測到P43的正緣脈波則
+			CK1<=P2CK1;		--接收U7A振盪器丟入的訊號
+			CK2<=P4CK2;		--接收U7B振盪器丟入的訊號
+			CLR<=CLR(0) & P3S1;--接收S1重置鈕的訊號，
+			--為了防突波雜訊，所以使用CLR(0) & P3S1
+			--這會使CLR需等待兩次的系統正緣訊號才動作
+		End If;
+		
+		--4bitsBCD碼計數器
+		If CLR = 3 Then
+			N3<=0;N2<=0;N1<=0;N0<=0;
+		Elsif	Rising_Edge(CK1) Then
+			If N0/=9 Then N0<=N0+1;		-- /=代表不等於
+			Else N0<=0;
+				If N1/=9 then N1<=N1+1;
+				Else N1<=0;
+					If N2/=9 then N2<=N2+1;
+					Else N2<=0;
+						If N3/=9 then N3<=N3+1;
+						Else N3<=0;
+						End If;
+					End If;
+				End If;
+			End If;
+		End If;
+		
+		--掃描產生器
+		If Rising_Edge(CK2) then
+			S <= S+1;
+		End If;
+		
+	End Process;
+	
+	--產生掃描碼
+	ba <= S;
+		
+	--篩選計數值
+	With S Select
+		DCBA <= N3 When 0,		--千位數亮
+				N2 When 1,		--百位數亮
+				N1 When 2,		--十位數亮
+				N0 When others;	--個位數亮
+	
+End Main;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
