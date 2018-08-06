@@ -1,22 +1,24 @@
 Library IEEE;
 Use IEEE.std_logic_1164.all;
 Use	IEEE.std_logic_unsigned.all;
-
+--請注意!!變數宣告名稱不可用特殊字元如: -,!,等
 Entity nox1_180806 is
 	Port(
 		GCKP43,P2CK1,P3S1,P4CK2:in std_logic;
+		--GCKP43為子板上的石英晶體訊號輸入端
+		--其餘後面三隻接腳則是機台送入的訊號
 		DCBA:out integer range 0 to 9;
 		ba:out integer range 0 to 3);
 End nox1_180806;
 
 Architecture Main of nox1_180806 is
-	--==========Signal宣告區=============
+	--==========Signal宣告區(內部接線)=============
 	Signal CK1,CK2:std_logic;
 	Signal N3,N2,N1,N0:integer range 0 to 9;
 	Signal S:integer range 0 to 3;
 	Signal CLR:std_logic_vector(1 downto 0);
 	--CLR為了防雜訊所以宣告成兩位元
-	--==========Signal宣告區=============
+	--==========Signal宣告區(內部接線)=============
 begin
 
 	Process(GCKP43)
@@ -48,9 +50,9 @@ begin
 			End If;
 		End If;
 		
-		--掃描產生器
-		If Rising_Edge(CK2) then
-			S <= S+1;
+		--7SEG掃描產生器
+		If Rising_Edge(CK2) then--根據機台送入的方波
+			S <= S+1;			--做出編碼訊號
 		End If;
 		
 	End Process;
@@ -58,7 +60,7 @@ begin
 	--產生掃描碼
 	ba <= S;
 		
-	--篩選計數值
+	--依據S數值解碼，讓4顆7SEG分別亮
 	With S Select
 		DCBA <= N3 When 0,		--千位數亮
 				N2 When 1,		--百位數亮
