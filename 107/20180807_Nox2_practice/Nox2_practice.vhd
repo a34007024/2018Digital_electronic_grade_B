@@ -5,11 +5,12 @@ Use IEEE.std_logic_unsigned.all;
 Entity Nox2_practice is
 	port(
 	GCKP43,p14co,p13co:in std_logic;
-	keyin:in std_logic_vector(2 downto 0);
+	keyin:in std_logic_vector(2 downto 0);--接收鍵盤按下資訊，利用keyscan送出的編碼+keyin收到的編碼來判斷是哪個鍵被按下了
 	keyscan:out std_logic_vector(3 downto 0);
-	keycode:out integer range 0 to 15;
-	pe:out std_logic_vector(1 downto 0);
-	p1stop:out std_logic
+--分別送出訊號給不同列的鍵盤，以偵測鍵盤是否按下
+	keycode:out integer range 0 to 15;--把按鍵值以BCD碼輸出給機台
+	pe:out std_logic_vector(1 downto 0);--U5 U6 4510並列載入預設信號的Enable觸發接腳，在設定7SEG數字狀態及把7SEG變為00時會用到
+	p1stop:out std_logic--偵測停止按鈕是否按下
 	);
 	
 end Nox2_practice;
@@ -19,7 +20,8 @@ Architecture main of Nox2_practice is
 	-----Signal Define Area-----
 	--鍵盤參數
 	Signal I:integer range 0 to 3;
-	Signal kn:integer range 0 to 15;
+	--儲存keyscan掃瞄到第幾行
+	Signal kn:integer range 0 to 15;--接收到的按鍵數值
 	Signal ki,ko:std_logic_vector(3 downto 0);
 	--
 	Signal k_reset,kok,ks:std_logic;
