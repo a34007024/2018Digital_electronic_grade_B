@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.200 ns
+From           : p22clock
+To             : clock
+From Clock     : --
+To Clock       : GCKP43
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 24.000 ns
+From           : lpm_counter:h0s_rtl_0|dffs[0]
+To             : h0o[0]
+From Clock     : GCKP43
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.000 ns
+From           : p7ckm
+To             : p6s10to0
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -2.000 ns
+From           : p22clock
+To             : clock
+From Clock     : --
+To Clock       : GCKP43
+Failed Paths   : 0
+
+Type           : Clock Setup: 'GCKP43'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 59.88 MHz ( period = 16.700 ns )
+From           : lpm_counter:h0s_rtl_0|dffs[2]
+To             : lpm_counter:h0s_rtl_0|dffs[2]
+From Clock     : GCKP43
+To Clock       : GCKP43
+Failed Paths   : 0
+
+Type           : Clock Hold: 'GCKP43'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : lpm_counter:h0s_rtl_0|dffs[0]
+To             : lpm_counter:h0s_rtl_0|dffs[0]
+From Clock     : GCKP43
+To Clock       : GCKP43
+Failed Paths   : 28
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 28
+
+--------------------------------------------------------------------------------------
+
