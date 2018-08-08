@@ -64,39 +64,39 @@ CHIP  "Nox3_practice"  ASSIGNED TO AN: EPM3064ALC44-10
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-p20s1                        : 1         : input  : 3.3-V LVTTL       :         :           : N              
+GND+                         : 1         :        :                   :         :           :                
 GND+                         : 2         :        :                   :         :           :                
 VCCINT                       : 3         : power  :                   : 3.3V    :           :                
-p19ckh                       : 4         : input  : 3.3-V LVTTL       :         :           : N              
-p7ckm                        : 5         : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 4         :        :                   :         :           :                
+RESERVED                     : 5         :        :                   :         :           :                
 RESERVED                     : 6         :        :                   :         :           :                
 TDI                          : 7         : input  : 3.3-V LVTTL       :         :           : N              
 RESERVED                     : 8         :        :                   :         :           :                
-RESERVED                     : 9         :        :                   :         :           :                
+p22clock                     : 9         : input  : 3.3-V LVTTL       :         :           : Y              
 GND                          : 10        : gnd    :                   :         :           :                
-RESERVED                     : 11        :        :                   :         :           :                
-RESERVED                     : 12        :        :                   :         :           :                
+p21s2                        : 11        : input  : 3.3-V LVTTL       :         :           : Y              
+p20s1                        : 12        : input  : 3.3-V LVTTL       :         :           : Y              
 TMS                          : 13        : input  : 3.3-V LVTTL       :         :           : N              
-h0o[1]                       : 14        : output : 3.3-V LVTTL       :         :           : N              
+p19ckh                       : 14        : input  : 3.3-V LVTTL       :         :           : Y              
 VCCIO                        : 15        : power  :                   : 3.3V    :           :                
-h0o[0]                       : 16        : output : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 16        :        :                   :         :           :                
 GND                          : 17        : gnd    :                   :         :           :                
-h0o[2]                       : 18        : output : 3.3-V LVTTL       :         :           : N              
-h0o[3]                       : 19        : output : 3.3-V LVTTL       :         :           : N              
-h10o[1]                      : 20        : output : 3.3-V LVTTL       :         :           : N              
-h10o[0]                      : 21        : output : 3.3-V LVTTL       :         :           : N              
+h0o[3]                       : 18        : output : 3.3-V LVTTL       :         :           : Y              
+h0o[2]                       : 19        : output : 3.3-V LVTTL       :         :           : Y              
+h0o[1]                       : 20        : output : 3.3-V LVTTL       :         :           : Y              
+h0o[0]                       : 21        : output : 3.3-V LVTTL       :         :           : Y              
 GND                          : 22        : gnd    :                   :         :           :                
 VCCINT                       : 23        : power  :                   : 3.3V    :           :                
-p8ckm                        : 24        : output : 3.3-V LVTTL       :         :           : N              
-p4led                        : 25        : output : 3.3-V LVTTL       :         :           : N              
-p6s10to0                     : 26        : output : 3.3-V LVTTL       :         :           : N              
-p5s3                         : 27        : input  : 3.3-V LVTTL       :         :           : N              
-p21s2                        : 28        : input  : 3.3-V LVTTL       :         :           : N              
+p8ckm                        : 24        : output : 3.3-V LVTTL       :         :           : Y              
+p7ckm                        : 25        : input  : 3.3-V LVTTL       :         :           : Y              
+p6s10to0                     : 26        : output : 3.3-V LVTTL       :         :           : Y              
+p5s3                         : 27        : input  : 3.3-V LVTTL       :         :           : Y              
+p4led                        : 28        : output : 3.3-V LVTTL       :         :           : Y              
 RESERVED                     : 29        :        :                   :         :           :                
 GND                          : 30        : gnd    :                   :         :           :                
-RESERVED                     : 31        :        :                   :         :           :                
+h10o[1]                      : 31        : output : 3.3-V LVTTL       :         :           : Y              
 TCK                          : 32        : input  : 3.3-V LVTTL       :         :           : N              
-RESERVED                     : 33        :        :                   :         :           :                
+h10o[0]                      : 33        : output : 3.3-V LVTTL       :         :           : Y              
 RESERVED                     : 34        :        :                   :         :           :                
 VCCIO                        : 35        : power  :                   : 3.3V    :           :                
 GND                          : 36        : gnd    :                   :         :           :                
@@ -104,7 +104,7 @@ RESERVED                     : 37        :        :                   :         
 TDO                          : 38        : output : 3.3-V LVTTL       :         :           : N              
 RESERVED                     : 39        :        :                   :         :           :                
 RESERVED                     : 40        :        :                   :         :           :                
-p22clock                     : 41        : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 41        :        :                   :         :           :                
 GND                          : 42        : gnd    :                   :         :           :                
-GCKP43                       : 43        : input  : 3.3-V LVTTL       :         :           : N              
+GCKP43                       : 43        : input  : 3.3-V LVTTL       :         :           : Y              
 GND+                         : 44        :        :                   :         :           :                

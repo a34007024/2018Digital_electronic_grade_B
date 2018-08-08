@@ -15,7 +15,7 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 24.000 ns
+Actual Time    : 26.900 ns
 From           : lpm_counter:h0s_rtl_0|dffs[0]
 To             : h0o[0]
 From Clock     : GCKP43

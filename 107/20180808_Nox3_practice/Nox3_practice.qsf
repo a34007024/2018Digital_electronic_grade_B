@@ -46,3 +46,21 @@ set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id e
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name VHDL_FILE Nox3_practice.vhd
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_12 -to p20s1
+set_location_assignment PIN_11 -to p21s2
+set_global_assignment -name MISC_FILE "D:/2018Digital_electronic_grade_B/107/20180808_Nox3_practice/Nox3_practice.dpf"
+set_location_assignment PIN_21 -to h0o[0]
+set_location_assignment PIN_20 -to h0o[1]
+set_location_assignment PIN_19 -to h0o[2]
+set_location_assignment PIN_18 -to h0o[3]
+set_location_assignment PIN_33 -to h10o[0]
+set_location_assignment PIN_31 -to h10o[1]
+set_location_assignment PIN_28 -to p4led
+set_location_assignment PIN_27 -to p5s3
+set_location_assignment PIN_26 -to p6s10to0
+set_location_assignment PIN_25 -to p7ckm
+set_location_assignment PIN_24 -to p8ckm
+set_location_assignment PIN_14 -to p19ckh
+set_location_assignment PIN_9 -to p22clock
+set_location_assignment PIN_43 -to GCKP43
