@@ -1,0 +1,16 @@
+|nox1_180810
+GCKP43 => p3s1CLRsignal[0].CLK
+GCKP43 => p3s1CLRsignal[1].CLK
+GCKP43 => p4ck2signal.CLK
+GCKP43 => p2ck1signal.CLK
+p2ck1in => p2ck1signal.DATAIN
+p4ck2in => p4ck2signal.DATAIN
+DCBAoutputToU6[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+DCBAoutputToU6[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+DCBAoutputToU6[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+DCBAoutputToU6[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+p16outputB <= twoBitsCounterOutput[1].DB_MAX_OUTPUT_PORT_TYPE
+p14outputA <= twoBitsCounterOutput[0].DB_MAX_OUTPUT_PORT_TYPE
+p3s1CLR => p3s1CLRsignal[0].DATAIN
+
+

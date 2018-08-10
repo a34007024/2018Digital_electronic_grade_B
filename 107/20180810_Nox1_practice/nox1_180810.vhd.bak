@@ -44,7 +44,7 @@ begin
 					elsif N2 = 9 then N2<=0;
 						if N3 /= 9 then N3<=N3+1;
 						elsif N3 = 9 then
-							N3<=0;N2<=0;N1<=0;N0<=0;--數字歸零
+							N3<=0;N2<=0;N1<=0,N0<=0;--數字歸零
 						end if;
 					end if;
 				end if;
