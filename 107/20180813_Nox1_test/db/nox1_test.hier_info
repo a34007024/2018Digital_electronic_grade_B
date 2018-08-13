@@ -1,0 +1,16 @@
+|nox1_test
+p2ck1in => ck1signal.DATAIN
+p4ck2in => ck2signal.DATAIN
+GCKP43 => p3s1signal[0].CLK
+GCKP43 => p3s1signal[1].CLK
+GCKP43 => ck2signal.CLK
+GCKP43 => ck1signal.CLK
+p3s1in => p3s1signal[0].DATAIN
+p14p16ba[0] <= p14p16baSignal[0].DB_MAX_OUTPUT_PORT_TYPE
+p14p16ba[1] <= p14p16baSignal[1].DB_MAX_OUTPUT_PORT_TYPE
+DCBAout[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+DCBAout[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+DCBAout[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+DCBAout[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

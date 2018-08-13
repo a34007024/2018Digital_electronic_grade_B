@@ -1,0 +1,395 @@
+Classic Timing Analyzer report for nox1_test
+Mon Aug 13 12:53:34 2018
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'GCKP43'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                 ;
++------------------------------+-------+---------------+----------------------------------+--------+---------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From   ; To            ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------+---------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.200 ns                         ; p3s1in ; p3s1signal[0] ; --         ; GCKP43   ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 20.400 ns                        ; N0[0]  ; DCBAout[0]    ; GCKP43     ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.000 ns                        ; p3s1in ; p3s1signal[0] ; --         ; GCKP43   ; 0            ;
+; Clock Setup: 'GCKP43'        ; N/A   ; None          ; 99.01 MHz ( period = 10.100 ns ) ; N0[2]  ; N3[3]         ; GCKP43     ; GCKP43   ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;        ;               ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------+---------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EPM3064ALC44-10    ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; GCKP43          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'GCKP43'                                                                                                                                                                         ;
++-------+-----------------------------------+-------------------+-------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)              ; From              ; To                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+-----------------------------------+-------------------+-------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; p3s1signal[0]     ; p3s1signal[1]     ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; p14p16baSignal[0] ; p14p16baSignal[1] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N0[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N0[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N0[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N0[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N0[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N0[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N0[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N0[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N0[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N0[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N1[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N1[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N1[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N1[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N1[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N1[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N1[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N1[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N1[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N1[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N1[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N1[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N1[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N1[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N1[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N1[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N2[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N2[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N2[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N2[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[0]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[1]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[3]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; N0[2]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; p14p16baSignal[0] ; p14p16baSignal[0] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; p14p16baSignal[1] ; p14p16baSignal[1] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N0[0]             ; N0[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N0[2]             ; N0[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N1[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N1[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N1[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[3]             ; N1[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N1[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N1[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N1[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[3]             ; N1[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N1[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N1[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N1[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N1[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N2[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N2[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[3]             ; N2[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N2[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[0]             ; N2[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[3]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[0]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[1]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[3]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[2]             ; N2[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[3]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[0]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[1]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[3]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[2]             ; N2[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[3]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[0]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[1]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[2]             ; N2[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[3]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[0]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[1]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[3]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[2]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[0]             ; N3[0]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[3]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[0]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[1]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[3]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[2]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[0]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[2]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[1]             ; N3[2]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[3]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[0]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[1]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[3]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[2]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[0]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[2]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[1]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[3]             ; N3[1]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[0]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[1]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[3]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N1[2]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[0]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[1]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[3]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N2[2]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[0]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[2]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[1]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; N3[3]             ; N3[3]             ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
++-------+-----------------------------------+-------------------+-------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------+
+; tsu                                                                    ;
++-------+--------------+------------+---------+---------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To            ; To Clock ;
++-------+--------------+------------+---------+---------------+----------+
+; N/A   ; None         ; 6.200 ns   ; p2ck1in ; ck1signal     ; GCKP43   ;
+; N/A   ; None         ; 6.200 ns   ; p4ck2in ; ck2signal     ; GCKP43   ;
+; N/A   ; None         ; 6.200 ns   ; p3s1in  ; p3s1signal[0] ; GCKP43   ;
++-------+--------------+------------+---------+---------------+----------+
+
+
++----------------------------------------------------------------------------------+
+; tco                                                                              ;
++-------+--------------+------------+-------------------+-------------+------------+
+; Slack ; Required tco ; Actual tco ; From              ; To          ; From Clock ;
++-------+--------------+------------+-------------------+-------------+------------+
+; N/A   ; None         ; 20.400 ns  ; N0[1]             ; DCBAout[1]  ; GCKP43     ;
+; N/A   ; None         ; 20.400 ns  ; N0[3]             ; DCBAout[3]  ; GCKP43     ;
+; N/A   ; None         ; 20.400 ns  ; N0[2]             ; DCBAout[2]  ; GCKP43     ;
+; N/A   ; None         ; 20.400 ns  ; N0[0]             ; DCBAout[0]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; p14p16baSignal[0] ; DCBAout[1]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N1[1]             ; DCBAout[1]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N2[1]             ; DCBAout[1]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N3[1]             ; DCBAout[1]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; p14p16baSignal[0] ; DCBAout[3]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N1[3]             ; DCBAout[3]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N2[3]             ; DCBAout[3]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N3[3]             ; DCBAout[3]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; p14p16baSignal[0] ; DCBAout[2]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N1[2]             ; DCBAout[2]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N2[2]             ; DCBAout[2]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N3[2]             ; DCBAout[2]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; p14p16baSignal[0] ; DCBAout[0]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N1[0]             ; DCBAout[0]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N2[0]             ; DCBAout[0]  ; GCKP43     ;
+; N/A   ; None         ; 20.300 ns  ; N3[0]             ; DCBAout[0]  ; GCKP43     ;
+; N/A   ; None         ; 20.200 ns  ; p14p16baSignal[1] ; DCBAout[1]  ; GCKP43     ;
+; N/A   ; None         ; 20.200 ns  ; p14p16baSignal[1] ; DCBAout[3]  ; GCKP43     ;
+; N/A   ; None         ; 20.200 ns  ; p14p16baSignal[1] ; DCBAout[2]  ; GCKP43     ;
+; N/A   ; None         ; 20.200 ns  ; p14p16baSignal[1] ; DCBAout[0]  ; GCKP43     ;
+; N/A   ; None         ; 13.400 ns  ; p14p16baSignal[1] ; p14p16ba[1] ; GCKP43     ;
+; N/A   ; None         ; 13.400 ns  ; p14p16baSignal[0] ; p14p16ba[0] ; GCKP43     ;
++-------+--------------+------------+-------------------+-------------+------------+
+
+
++------------------------------------------------------------------------------+
+; th                                                                           ;
++---------------+-------------+-----------+---------+---------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To            ; To Clock ;
++---------------+-------------+-----------+---------+---------------+----------+
+; N/A           ; None        ; -2.000 ns ; p2ck1in ; ck1signal     ; GCKP43   ;
+; N/A           ; None        ; -2.000 ns ; p4ck2in ; ck2signal     ; GCKP43   ;
+; N/A           ; None        ; -2.000 ns ; p3s1in  ; p3s1signal[0] ; GCKP43   ;
++---------------+-------------+-----------+---------+---------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Aug 13 12:53:34 2018
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off nox1_test -c nox1_test
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Timing Analysis does not support the analysis of latches as synchronous elements for the currently selected device family
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "GCKP43" is an undefined clock
+Warning: Found 2 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "ck1signal" as buffer
+    Info: Detected ripple clock "ck2signal" as buffer
+Info: Clock "GCKP43" has Internal fmax of 99.01 MHz between source register "p3s1signal[0]" and destination register "p3s1signal[1]" (period= 10.1 ns)
+    Info: + Longest register to register delay is 5.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC2; Fanout = 17; REG Node = 'p3s1signal[0]'
+        Info: 2: + IC(2.400 ns) + CELL(3.200 ns) = 5.600 ns; Loc. = LC4; Fanout = 16; REG Node = 'p3s1signal[1]'
+        Info: Total cell delay = 3.200 ns ( 57.14 % )
+        Info: Total interconnect delay = 2.400 ns ( 42.86 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "GCKP43" to destination register is 3.600 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_43; Fanout = 4; CLK Node = 'GCKP43'
+            Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.600 ns; Loc. = LC4; Fanout = 16; REG Node = 'p3s1signal[1]'
+            Info: Total cell delay = 3.600 ns ( 100.00 % )
+        Info: - Longest clock path from clock "GCKP43" to source register is 3.600 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_43; Fanout = 4; CLK Node = 'GCKP43'
+            Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.600 ns; Loc. = LC2; Fanout = 17; REG Node = 'p3s1signal[0]'
+            Info: Total cell delay = 3.600 ns ( 100.00 % )
+    Info: + Micro clock to output delay of source is 1.600 ns
+    Info: + Micro setup delay of destination is 2.900 ns
+Info: tsu for register "ck1signal" (data pin = "p2ck1in", clock pin = "GCKP43") is 6.200 ns
+    Info: + Longest pin to register delay is 6.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_33; Fanout = 1; PIN Node = 'p2ck1in'
+        Info: 2: + IC(2.300 ns) + CELL(3.200 ns) = 6.900 ns; Loc. = LC3; Fanout = 16; REG Node = 'ck1signal'
+        Info: Total cell delay = 4.600 ns ( 66.67 % )
+        Info: Total interconnect delay = 2.300 ns ( 33.33 % )
+    Info: + Micro setup delay of destination is 2.900 ns
+    Info: - Shortest clock path from clock "GCKP43" to destination register is 3.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_43; Fanout = 4; CLK Node = 'GCKP43'
+        Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.600 ns; Loc. = LC3; Fanout = 16; REG Node = 'ck1signal'
+        Info: Total cell delay = 3.600 ns ( 100.00 % )
+Info: tco from clock "GCKP43" to destination pin "DCBAout[1]" through register "N0[1]" is 20.400 ns
+    Info: + Longest clock path from clock "GCKP43" to source register is 10.100 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_43; Fanout = 4; CLK Node = 'GCKP43'
+        Info: 2: + IC(0.000 ns) + CELL(2.900 ns) = 5.200 ns; Loc. = LC3; Fanout = 16; REG Node = 'ck1signal'
+        Info: 3: + IC(2.400 ns) + CELL(2.500 ns) = 10.100 ns; Loc. = LC34; Fanout = 27; REG Node = 'N0[1]'
+        Info: Total cell delay = 7.700 ns ( 76.24 % )
+        Info: Total interconnect delay = 2.400 ns ( 23.76 % )
+    Info: + Micro clock to output delay of source is 1.600 ns
+    Info: + Longest register to pin delay is 8.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC34; Fanout = 27; REG Node = 'N0[1]'
+        Info: 2: + IC(2.400 ns) + CELL(4.500 ns) = 6.900 ns; Loc. = LC35; Fanout = 1; COMB Node = 'Mux2~13'
+        Info: 3: + IC(0.000 ns) + CELL(1.800 ns) = 8.700 ns; Loc. = PIN_25; Fanout = 0; PIN Node = 'DCBAout[1]'
+        Info: Total cell delay = 6.300 ns ( 72.41 % )
+        Info: Total interconnect delay = 2.400 ns ( 27.59 % )
+Info: th for register "ck1signal" (data pin = "p2ck1in", clock pin = "GCKP43") is -2.000 ns
+    Info: + Longest clock path from clock "GCKP43" to destination register is 3.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_43; Fanout = 4; CLK Node = 'GCKP43'
+        Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.600 ns; Loc. = LC3; Fanout = 16; REG Node = 'ck1signal'
+        Info: Total cell delay = 3.600 ns ( 100.00 % )
+    Info: + Micro hold delay of destination is 1.300 ns
+    Info: - Shortest pin to register delay is 6.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_33; Fanout = 1; PIN Node = 'p2ck1in'
+        Info: 2: + IC(2.300 ns) + CELL(3.200 ns) = 6.900 ns; Loc. = LC3; Fanout = 16; REG Node = 'ck1signal'
+        Info: Total cell delay = 4.600 ns ( 66.67 % )
+        Info: Total interconnect delay = 2.300 ns ( 33.33 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 200 megabytes
+    Info: Processing ended: Mon Aug 13 12:53:34 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
