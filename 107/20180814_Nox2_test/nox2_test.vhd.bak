@@ -1,0 +1,14 @@
+Library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+
+entity nox2_test is
+port();
+
+end entity;
+
+architecture main of nox2_test is
+
+begin
+
+end architecture;

@@ -1,0 +1,486 @@
+Fitter report for Nox2
+Tue Aug 14 15:23:33 2018
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. I/O Standard
+ 11. Dedicated Inputs I/O
+ 12. Output Pin Default Load For Reported TCO
+ 13. Fitter Resource Utilization by Entity
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Interconnect Usage Summary
+ 18. LAB Macrocells
+ 19. Parallel Expander
+ 20. Shareable Expander
+ 21. Logic Cell Interconnection
+ 22. Fitter Device Options
+ 23. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------+
+; Fitter Summary                                                       ;
++-----------------------+----------------------------------------------+
+; Fitter Status         ; Successful - Tue Aug 14 15:23:33 2018        ;
+; Quartus II Version    ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name         ; Nox2                                         ;
+; Top-level Entity Name ; NoX2                                         ;
+; Family                ; MAX3000A                                     ;
+; Device                ; EPM3064ALC44-10                              ;
+; Timing Models         ; Final                                        ;
+; Total macrocells      ; 46 / 64 ( 72 % )                             ;
+; Total pins            ; 21 / 34 ( 62 % )                             ;
++-----------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                              ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                     ; Setting         ; Default Value ;
++----------------------------------------------------------------------------+-----------------+---------------+
+; Device                                                                     ; EPM3064ALC44-10 ;               ;
+; Use smart compilation                                                      ; Off             ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                                ; Off             ; Off           ;
+; Use TimeQuest Timing Analyzer                                              ; Off             ; Off           ;
+; Optimize Timing for ECOs                                                   ; Off             ; Off           ;
+; Regenerate full fit report during ECO compiles                             ; Off             ; Off           ;
+; Optimize IOC Register Placement for Timing                                 ; On              ; On            ;
+; Limit to One Fitting Attempt                                               ; Off             ; Off           ;
+; Fitter Initial Placement Seed                                              ; 1               ; 1             ;
+; Slow Slew Rate                                                             ; Off             ; Off           ;
+; Fitter Effort                                                              ; Auto Fit        ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off             ; Off           ;
+; Use Best Effort Settings for Compilation                                   ; Off             ; Off           ;
++----------------------------------------------------------------------------+-----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in D:/2018Digital_electronic_grade_B/Standard_Examples/Nox2_變數名稱改/Nox2.pin.
+
+
++------------------------------------------------------+
+; Fitter Resource Usage Summary                        ;
++-----------------------------------+------------------+
+; Resource                          ; Usage            ;
++-----------------------------------+------------------+
+; Logic cells                       ; 46 / 64 ( 72 % ) ;
+; Registers                         ; 36 / 64 ( 56 % ) ;
+; Number of pterms used             ; 113              ;
+; User inserted logic elements      ; 0                ;
+; I/O pins                          ; 21 / 34 ( 62 % ) ;
+;     -- Clock pins                 ; 1 / 2 ( 50 % )   ;
+;     -- Dedicated input pins       ; 0 / 2 ( 0 % )    ;
+; Global signals                    ; 1                ;
+; Shareable expanders               ; 5 / 64 ( 8 % )   ;
+; Parallel expanders                ; 8 / 60 ( 13 % )  ;
+; Cells using turbo bit             ; 46 / 64 ( 72 % ) ;
+; Maximum fan-out node              ; keypressed       ;
+; Maximum fan-out                   ; 24               ;
+; Highest non-global fan-out signal ; keypressed       ;
+; Highest non-global fan-out        ; 24               ;
+; Total fan-out                     ; 335              ;
+; Average fan-out                   ; 4.65             ;
++-----------------------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                    ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
+; Name     ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; I/O Standard ; Location assigned by ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
+; GCKP43   ; 43    ; --       ; --  ; 24                    ; 0                  ; yes    ; 3.3-V LVTTL  ; User                 ;
+; keyin[0] ; 37    ; --       ; 4   ; 11                    ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; keyin[1] ; 33    ; --       ; 4   ; 12                    ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; keyin[2] ; 29    ; --       ; 3   ; 11                    ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; p13co    ; 18    ; --       ; 2   ; 1                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; p14co    ; 19    ; --       ; 2   ; 1                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
++----------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                    ;
++------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name       ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; DCBAout[0] ; 27    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; DCBAout[1] ; 31    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; DCBAout[2] ; 34    ; --       ; 4   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; DCBAout[3] ; 26    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; keyscan[0] ; 6     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; keyscan[1] ; 21    ; --       ; 2   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; keyscan[2] ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; keyscan[3] ; 20    ; --       ; 2   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; p1stop     ; 39    ; --       ; 4   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; p6p20pe[0] ; 4     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; p6p20pe[1] ; 28    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
++------------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 0          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 2        ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 3.3V    ;                 ;
+; 4        ; 3          ; --       ; p6p20pe[0]     ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 5        ; 4          ; --       ; keyscan[2]     ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 6        ; 5          ; --       ; keyscan[0]     ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 7        ; 6          ; --       ; TDI            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 8        ; 7          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 9        ; 8          ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 10       ; 9          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 11       ; 10         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 12       ; 11         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 13       ; 12         ; --       ; TMS            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 14       ; 13         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 15       ; 14         ; --       ; VCCIO          ; power  ;              ; 3.3V    ;                 ;
+; 16       ; 15         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 17       ; 16         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 18       ; 17         ; --       ; p13co          ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 19       ; 18         ; --       ; p14co          ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 20       ; 19         ; --       ; keyscan[3]     ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 21       ; 20         ; --       ; keyscan[1]     ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 22       ; 21         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 23       ; 22         ; --       ; VCCINT         ; power  ;              ; 3.3V    ;                 ;
+; 24       ; 23         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 25       ; 24         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 26       ; 25         ; --       ; DCBAout[3]     ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 27       ; 26         ; --       ; DCBAout[0]     ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 28       ; 27         ; --       ; p6p20pe[1]     ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 29       ; 28         ; --       ; keyin[2]       ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 30       ; 29         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 31       ; 30         ; --       ; DCBAout[1]     ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 32       ; 31         ; --       ; TCK            ; input  ; 3.3-V LVTTL  ;         ; N               ;
+; 33       ; 32         ; --       ; keyin[1]       ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 34       ; 33         ; --       ; DCBAout[2]     ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 35       ; 34         ; --       ; VCCIO          ; power  ;              ; 3.3V    ;                 ;
+; 36       ; 35         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 37       ; 36         ; --       ; keyin[0]       ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 38       ; 37         ; --       ; TDO            ; output ; 3.3-V LVTTL  ;         ; N               ;
+; 39       ; 38         ; --       ; p1stop         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 40       ; 39         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 41       ; 40         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 43       ; 42         ; --       ; GCKP43         ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 44       ; 43         ; --       ; GND+           ;        ;              ;         ;                 ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++--------------------------------------------------------------------------------------------------+
+; I/O Standard                                                                                     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; I/O Standard ; Input Vref ; Dedicated Input Pins ; Pins in I/O Bank1 ; Pins in I/O Bank2 ; Total ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; 3.3-V LVTTL  ; -          ; 1                    ; 0                 ; 0                 ; 1     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+
+
++----------------------------------------------------------------------+
+; Dedicated Inputs I/O                                                 ;
++--------+-------+-------+-------+--------------+------------+---------+
+; Name   ; Pin # ; Type  ; VCCIO ; I/O Standard ; Input Vref ; Current ;
++--------+-------+-------+-------+--------------+------------+---------+
+; GCKP43 ; 43    ; Input ; --    ; 3.3-V LVTTL  ; -          ; 0 mA    ;
++--------+-------+-------+-------+--------------+------------+---------+
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; 3.3-V LVTTL  ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS ; 10 pF ; Not Available          ;
+; 3.3-V PCI    ; 10 pF ; 25 Ohm (Parallel)      ;
+; 2.5 V        ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                       ;
++------------------------------------+------------+------+-------------------------------------+--------------+
+; Compilation Hierarchy Node         ; Macrocells ; Pins ; Full Hierarchy Name                 ; Library Name ;
++------------------------------------+------------+------+-------------------------------------+--------------+
+; |NoX2                              ; 46         ; 21   ; |NoX2                               ; work         ;
+;    |lpm_counter:freqDivider_rtl_0| ; 14         ; 0    ; |NoX2|lpm_counter:freqDivider_rtl_0 ; work         ;
+;    |lpm_counter:keynum_rtl_1|      ; 8          ; 0    ; |NoX2|lpm_counter:keynum_rtl_1      ; work         ;
++------------------------------------+------------+------+-------------------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                       ;
++----------------------------------------+----------+---------+----------------------+--------+----------------------+------------------+
+; Name                                   ; Location ; Fan-Out ; Usage                ; Global ; Global Resource Used ; Global Line Name ;
++----------------------------------------+----------+---------+----------------------+--------+----------------------+------------------+
+; GCKP43                                 ; PIN_43   ; 24      ; Clock                ; yes    ; On                   ; --               ;
+; lpm_counter:freqDivider_rtl_0|dffs[0]  ; LC7      ; 21      ; Clock enable         ; no     ; --                   ; --               ;
+; lpm_counter:freqDivider_rtl_0|dffs[13] ; LC50     ; 12      ; Clock                ; no     ; --                   ; --               ;
+; p1signal4p13coS[0]                     ; LC2      ; 3       ; Clock enable         ; no     ; --                   ; --               ;
+; p1signal4p13coS[1]                     ; LC64     ; 2       ; Clock enable         ; no     ; --                   ; --               ;
+; process_0~12bal                        ; LC24     ; 12      ; Async. clear, Preset ; no     ; --                   ; --               ;
+; startupReset                           ; LC49     ; 7       ; Clock enable         ; no     ; --                   ; --               ;
++----------------------------------------+----------+---------+----------------------+--------+----------------------+------------------+
+
+
++-----------------------------------------------------------------------+
+; Global & Other Fast Signals                                           ;
++--------+----------+---------+----------------------+------------------+
+; Name   ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++--------+----------+---------+----------------------+------------------+
+; GCKP43 ; PIN_43   ; 24      ; On                   ; --               ;
++--------+----------+---------+----------------------+------------------+
+
+
++--------------------------------------------------+
+; Non-Global High Fan-Out Signals                  ;
++----------------------------------------+---------+
+; Name                                   ; Fan-Out ;
++----------------------------------------+---------+
+; keypressed                             ; 24      ;
+; I[1]                                   ; 21      ;
+; lpm_counter:freqDivider_rtl_0|dffs[0]  ; 21      ;
+; I[0]                                   ; 16      ;
+; keyin[1]                               ; 12      ;
+; process_0~12bal                        ; 12      ;
+; lpm_counter:freqDivider_rtl_0|dffs[13] ; 12      ;
+; lpm_counter:freqDivider_rtl_0|dffs[1]  ; 12      ;
+; keyin[2]                               ; 11      ;
+; keyin[0]                               ; 11      ;
+; lpm_counter:freqDivider_rtl_0|dffs[2]  ; 11      ;
+; lpm_counter:freqDivider_rtl_0|dffs[3]  ; 10      ;
+; lpm_counter:freqDivider_rtl_0|dffs[4]  ; 9       ;
+; keyscansignalK                         ; 8       ;
+; lpm_counter:keynum_rtl_1|dffs[0]       ; 8       ;
+; lpm_counter:freqDivider_rtl_0|dffs[5]  ; 8       ;
+; keyscansignal[3]                       ; 7       ;
+; lpm_counter:freqDivider_rtl_0|dffs[6]  ; 7       ;
+; startupReset                           ; 7       ;
+; keyscansignal[0]                       ; 6       ;
+; lpm_counter:keynum_rtl_1|dffs[1]       ; 6       ;
+; lpm_counter:freqDivider_rtl_0|dffs[7]  ; 6       ;
+; lpm_counter:freqDivider_rtl_0|dffs[8]  ; 5       ;
+; keyscansignal[2]                       ; 4       ;
+; keyscansignal[1]                       ; 4       ;
+; lpm_counter:keynum_rtl_1|dffs[2]       ; 4       ;
+; lpm_counter:freqDivider_rtl_0|dffs[9]  ; 4       ;
+; p6p20peSignal[0]                       ; 3       ;
+; p6p20peSignal[1]                       ; 3       ;
+; lpm_counter:freqDivider_rtl_0|dffs[10] ; 3       ;
+; p1signal4p13coS[0]                     ; 3       ;
+; K_RESET                                ; 2       ;
+; DCBAout[3]~reg0                        ; 2       ;
+; DCBAout[2]~reg0                        ; 2       ;
+; DCBAout[1]~reg0                        ; 2       ;
+; DCBAout[0]~reg0                        ; 2       ;
+; lpm_counter:keynum_rtl_1|dffs[3]       ; 2       ;
+; lpm_counter:freqDivider_rtl_0|dffs[11] ; 2       ;
+; p1signal4p13coS[1]                     ; 2       ;
+; p13co                                  ; 1       ;
+; p14co                                  ; 1       ;
+; keyscansignal[0]~50                    ; 1       ;
+; keyscansignal[3]~47                    ; 1       ;
+; keyscansignal[2]~44                    ; 1       ;
+; I[0]~28                                ; 1       ;
+; lpm_counter:keynum_rtl_1|dffs[3]~46    ; 1       ;
+; lpm_counter:keynum_rtl_1|dffs[2]~44    ; 1       ;
+; lpm_counter:keynum_rtl_1|dffs[1]~42    ; 1       ;
+; lpm_counter:keynum_rtl_1|dffs[0]~40    ; 1       ;
+; keyscansignal[1]~20                    ; 1       ;
++----------------------------------------+---------+
+
+
++------------------------------------------------+
+; Interconnect Usage Summary                     ;
++----------------------------+-------------------+
+; Interconnect Resource Type ; Usage             ;
++----------------------------+-------------------+
+; Output enables             ; 0 / 6 ( 0 % )     ;
+; PIA buffers                ; 65 / 144 ( 45 % ) ;
++----------------------------+-------------------+
+
+
++-----------------------------------------------------------------------+
+; LAB Macrocells                                                        ;
++-----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 11.50) ; Number of LABs  (Total = 4) ;
++-----------------------------------------+-----------------------------+
+; 0                                       ; 0                           ;
+; 1                                       ; 0                           ;
+; 2                                       ; 0                           ;
+; 3                                       ; 0                           ;
+; 4                                       ; 1                           ;
+; 5                                       ; 0                           ;
+; 6                                       ; 0                           ;
+; 7                                       ; 0                           ;
+; 8                                       ; 0                           ;
+; 9                                       ; 0                           ;
+; 10                                      ; 1                           ;
+; 11                                      ; 0                           ;
+; 12                                      ; 0                           ;
+; 13                                      ; 0                           ;
+; 14                                      ; 0                           ;
+; 15                                      ; 0                           ;
+; 16                                      ; 2                           ;
++-----------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parallel Expander                                       ;
++--------------------------+------------------------------+
+; Parallel Expander Length ; Number of Parallel Expanders ;
++--------------------------+------------------------------+
+; 0                        ; 0                            ;
+; 1                        ; 8                            ;
++--------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Shareable Expander                                                            ;
++-------------------------------------------------+-----------------------------+
+; Number of shareable expanders  (Average = 1.25) ; Number of LABs  (Total = 1) ;
++-------------------------------------------------+-----------------------------+
+; 0                                               ; 3                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 0                           ;
+; 3                                               ; 0                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 1                           ;
++-------------------------------------------------+-----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ; Output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC2        ; GCKP43, p14co, p13co                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ; p1signal4p13coS[1], p1signal~3, startupReset                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
+;  A  ; LC7        ; GCKP43                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; lpm_counter:freqDivider_rtl_0|dffs[1], startupReset, lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13], p6p20peSignal[1], p6p20peSignal[0], DCBAout[0]~reg0, DCBAout[1]~reg0, DCBAout[2]~reg0, DCBAout[3]~reg0, K_RESET ;
+;  A  ; LC13       ; keyin[1], keyscansignal[1], I[0], keypressed, I[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ; keyscansignal[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC6        ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ; lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                       ;
+;  A  ; LC11       ; keyscansignal[0]~50, I[1], keyscansignal[3], I[0], keypressed, keyin[1], keyscansignal[0], lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                   ; keyscansignal[1]~16, keyscansignal[1]~17, keyscansignal[1]~18, keyscansignal[1]~19, keyscansignal[0], keyscan[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  A  ; LC14       ; keyscansignal[2]~44, keyscansignal[1], keypressed, I[1], keyin[2], I[0], keyin[0], keyscansignal[2], lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                                                                         ; keyscansignal[2], keyscan[2], keyscansignal[3], keyscansignal[3]~47                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
+;  A  ; LC8        ; GCKP43, K_RESET, keyscansignalK, p6p20peSignal[0], p6p20peSignal[1], startupReset, lpm_counter:freqDivider_rtl_0|dffs[0]                                                                                                                                                                                                                                                                                                                                                                                                             ; K_RESET, process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
+;  A  ; LC16       ; GCKP43, keyscansignalK, p6p20peSignal[0], p6p20peSignal[1], startupReset, lpm_counter:freqDivider_rtl_0|dffs[0]                                                                                                                                                                                                                                                                                                                                                                                                                      ; p6p20peSignal[0], p6p20pe[0], K_RESET                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  A  ; LC4        ; keypressed, keyin[0], keyin[1], keyin[2], keyscansignalK, lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                                                    ; keyscansignalK, p6p20peSignal[1], p6p20peSignal[0], DCBAout[0]~reg0, DCBAout[1]~reg0, DCBAout[2]~reg0, DCBAout[3]~reg0, K_RESET                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  A  ; LC10       ; keyin[2], I[1], keyscansignal[3], keypressed, keyin[0], I[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ; keyscansignal[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC20       ; keyin[2], I[1], keyscansignal[3], keypressed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ; I[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
+;  B  ; LC25       ; keyin[2], lpm_counter:keynum_rtl_1|dffs[2], lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[0], keypressed, I[1]                                                                                                                                                                                                                                                                                                                                                                                                     ; lpm_counter:keynum_rtl_1|dffs[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC30       ; keyin[2], lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[0], keypressed, I[1]                                                                                                                                                                                                                                                                                                                                                                                                                                       ; lpm_counter:keynum_rtl_1|dffs[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC22       ; keyin[2], lpm_counter:keynum_rtl_1|dffs[0], keypressed, I[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ; lpm_counter:keynum_rtl_1|dffs[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC28       ; keyin[2], keypressed, I[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ; lpm_counter:keynum_rtl_1|dffs[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC19       ; keyscansignal[3]~47, keyscansignal[2], keypressed, I[1], keyin[2], I[0], keyin[0], keyscansignal[3], lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                                                                         ; I[0], I[1], keyscansignal[3], keyscan[3], keyscansignal[0], I[0]~28, keyscansignal[0]~50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
+;  B  ; LC17       ; keyscansignal[1]~16, keyscansignal[1]~17, keyscansignal[1]~18, keyscansignal[1]~19, keyscansignal[1]~20, lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                                                                     ; keyscansignal[1]~20, keyscan[1], keyscansignal[2], keyscansignal[2]~44                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  B  ; LC27       ; keyin[1], keyscansignal[3], keypressed, I[0], I[1], lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                                                          ; lpm_counter:keynum_rtl_1|dffs[0], lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[2], lpm_counter:keynum_rtl_1|dffs[3], keypressed, I[0], I[1], keyscansignal[1]~17, keyscansignal[1]~18, keyscansignal[1]~19, keyscansignal[2], keyscansignal[3], keyscansignal[0], lpm_counter:keynum_rtl_1|dffs[0]~40, lpm_counter:keynum_rtl_1|dffs[1]~42, lpm_counter:keynum_rtl_1|dffs[2]~44, lpm_counter:keynum_rtl_1|dffs[3]~46, I[0]~28, keyscansignal[2]~44, keyscansignal[3]~47, keyscansignal[0]~50                                                                                                                                              ;
+;  B  ; LC21       ; I[0]~28, keyin[0], I[1], keyscansignal[3], keypressed, I[0], keyin[1], lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                                       ; lpm_counter:keynum_rtl_1|dffs[0], lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[2], lpm_counter:keynum_rtl_1|dffs[3], keypressed, I[0], I[1], keyscansignal[1]~16, keyscansignal[1]~17, keyscansignal[1]~19, keyscansignal[2], keyscansignal[3], keyscansignal[0], keyscansignal[2]~44, keyscansignal[3]~47, keyscansignal[0]~50                                                                                                                                                                                                                                                                                                           ;
+;  B  ; LC32       ; keyin[2], I[0], I[1], keypressed, keyin[0], keyin[1], lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                                                        ; lpm_counter:keynum_rtl_1|dffs[0], lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[2], lpm_counter:keynum_rtl_1|dffs[3], keyscansignalK, keypressed, I[0], I[1], keyscansignal[1]~16, keyscansignal[1]~17, keyscansignal[1]~18, keyscansignal[1]~19, keyscansignal[1]~20, keyscansignal[2], keyscansignal[3], keyscansignal[0], lpm_counter:keynum_rtl_1|dffs[0]~40, lpm_counter:keynum_rtl_1|dffs[1]~42, lpm_counter:keynum_rtl_1|dffs[2]~44, lpm_counter:keynum_rtl_1|dffs[3]~46, I[0]~28, keyscansignal[2]~44, keyscansignal[3]~47, keyscansignal[0]~50                                                                                    ;
+;  B  ; LC29       ; lpm_counter:keynum_rtl_1|dffs[0]~40, I[0], keypressed, I[1], keyin[1], keyin[0], lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                             ; lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[2], lpm_counter:keynum_rtl_1|dffs[3], DCBAout[0]~reg0, lpm_counter:keynum_rtl_1|dffs[1]~42, lpm_counter:keynum_rtl_1|dffs[2]~44, lpm_counter:keynum_rtl_1|dffs[3]~46, process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  B  ; LC23       ; lpm_counter:keynum_rtl_1|dffs[1]~42, I[0], lpm_counter:keynum_rtl_1|dffs[0], keypressed, I[1], keyin[1], keyin[0], lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                                                           ; lpm_counter:keynum_rtl_1|dffs[2], lpm_counter:keynum_rtl_1|dffs[3], DCBAout[1]~reg0, lpm_counter:keynum_rtl_1|dffs[2]~44, lpm_counter:keynum_rtl_1|dffs[3]~46, process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  B  ; LC31       ; lpm_counter:keynum_rtl_1|dffs[2]~44, I[0], lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[0], keypressed, I[1], keyin[1], keyin[0], lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                                                         ; lpm_counter:keynum_rtl_1|dffs[3], DCBAout[2]~reg0, lpm_counter:keynum_rtl_1|dffs[3]~46, process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
+;  B  ; LC26       ; lpm_counter:keynum_rtl_1|dffs[3]~46, I[0], lpm_counter:keynum_rtl_1|dffs[2], lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[0], keypressed, I[1], keyin[1], keyin[0], lpm_counter:freqDivider_rtl_0|dffs[13], process_0~12bal                                                                                                                                                                                                                                                                                       ; DCBAout[3]~reg0, process_0~12bal                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC18       ; keyin[1], keyscansignal[2], I[0], keypressed, I[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ; keyscansignal[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  B  ; LC24       ; lpm_counter:keynum_rtl_1|dffs[3], K_RESET, lpm_counter:keynum_rtl_1|dffs[2], lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[0]                                                                                                                                                                                                                                                                                                                                                                                      ; lpm_counter:keynum_rtl_1|dffs[0], lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[2], lpm_counter:keynum_rtl_1|dffs[3], keyscansignalK, keypressed, I[0], I[1], keyscansignal[1], keyscansignal[2], keyscansignal[3], keyscansignal[0]                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  C  ; LC36       ; GCKP43, lpm_counter:keynum_rtl_1|dffs[3], keyscansignalK, startupReset, lpm_counter:freqDivider_rtl_0|dffs[0], DCBAout[3]~reg0                                                                                                                                                                                                                                                                                                                                                                                                       ; DCBAout[3]~reg0, DCBAout[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  C  ; LC40       ; GCKP43, keyscansignalK, startupReset, lpm_counter:freqDivider_rtl_0|dffs[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                          ; p6p20peSignal[0], p6p20pe[1], K_RESET                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  C  ; LC37       ; GCKP43, lpm_counter:keynum_rtl_1|dffs[0], keyscansignalK, startupReset, lpm_counter:freqDivider_rtl_0|dffs[0], DCBAout[0]~reg0                                                                                                                                                                                                                                                                                                                                                                                                       ; DCBAout[0]~reg0, DCBAout[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  C  ; LC46       ; GCKP43, lpm_counter:keynum_rtl_1|dffs[1], keyscansignalK, startupReset, lpm_counter:freqDivider_rtl_0|dffs[0], DCBAout[1]~reg0                                                                                                                                                                                                                                                                                                                                                                                                       ; DCBAout[1]~reg0, DCBAout[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  D  ; LC55       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10]                                                                                 ; lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  D  ; LC58       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9]                                                                                                                         ; lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC59       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8]                                                                                                                                                                ; lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  D  ; LC62       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7]                                                                                                                                                                                                       ; lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  D  ; LC52       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6]                                                                                                                                                                                                                                              ; lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                                                                                                                                                                                                                                 ;
+;  D  ; LC54       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5]                                                                                                                                                                                                                                                                                     ; lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                                                                                                                                                                                          ;
+;  D  ; LC56       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4]                                                                                                                                                                                                                                                                                                                            ; lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                                                                                                                                                   ;
+;  D  ; LC60       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3]                                                                                                                                                                                                                                                                                                                                                                   ; lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                                                                                                            ;
+;  D  ; LC61       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2]                                                                                                                                                                                                                                                                                                                                                                                                          ; lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                                                                     ;
+;  D  ; LC63       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                 ; lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12], lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                              ;
+;  D  ; LC49       ; GCKP43, p1signal4p13coS[0], p1signal4p13coS[1], lpm_counter:freqDivider_rtl_0|dffs[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                ; p6p20peSignal[1], p6p20peSignal[0], DCBAout[0]~reg0, DCBAout[1]~reg0, DCBAout[2]~reg0, DCBAout[3]~reg0, K_RESET                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
+;  D  ; LC57       ; p1signal4p13coS[0], p1signal4p13coS[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; p1stop                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC64       ; GCKP43, p1signal4p13coS[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ; p1signal~3, startupReset                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
+;  D  ; LC51       ; GCKP43, lpm_counter:keynum_rtl_1|dffs[2], keyscansignalK, startupReset, lpm_counter:freqDivider_rtl_0|dffs[0], DCBAout[2]~reg0                                                                                                                                                                                                                                                                                                                                                                                                       ; DCBAout[2]~reg0, DCBAout[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  D  ; LC50       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11], lpm_counter:freqDivider_rtl_0|dffs[12] ; lpm_counter:keynum_rtl_1|dffs[0], lpm_counter:keynum_rtl_1|dffs[1], lpm_counter:keynum_rtl_1|dffs[2], lpm_counter:keynum_rtl_1|dffs[3], keyscansignalK, keypressed, I[0], I[1], keyscansignal[1], keyscansignal[2], keyscansignal[3], keyscansignal[0]                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  D  ; LC53       ; GCKP43, lpm_counter:freqDivider_rtl_0|dffs[1], lpm_counter:freqDivider_rtl_0|dffs[0], lpm_counter:freqDivider_rtl_0|dffs[2], lpm_counter:freqDivider_rtl_0|dffs[3], lpm_counter:freqDivider_rtl_0|dffs[4], lpm_counter:freqDivider_rtl_0|dffs[5], lpm_counter:freqDivider_rtl_0|dffs[6], lpm_counter:freqDivider_rtl_0|dffs[7], lpm_counter:freqDivider_rtl_0|dffs[8], lpm_counter:freqDivider_rtl_0|dffs[9], lpm_counter:freqDivider_rtl_0|dffs[10], lpm_counter:freqDivider_rtl_0|dffs[11]                                         ; lpm_counter:freqDivider_rtl_0|dffs[13]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++-----+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Aug 14 15:23:31 2018
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Nox2 -c Nox2
+Info: Selected device EPM3064ALC44-10 for design "Nox2"
+Info: Quartus II Fitter was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 244 megabytes
+    Info: Processing ended: Tue Aug 14 15:23:33 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+
