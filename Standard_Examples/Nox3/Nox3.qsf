@@ -64,3 +64,4 @@ set_location_assignment PIN_14 -to P19CKH
 set_location_assignment PIN_12 -to P20S1
 set_location_assignment PIN_11 -to P21S2
 set_location_assignment PIN_9 -to P22CLOCK
+set_global_assignment -name MISC_FILE "D:/2018Digital_electronic_grade_B/Standard_Examples/Nox3/Nox3.dpf"
