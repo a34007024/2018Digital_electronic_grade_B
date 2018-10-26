@@ -35,8 +35,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'GCKP43'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 60.24 MHz ( period = 16.600 ns )
-From           : lpm_counter:KN_rtl_1|dffs[3]
+Actual Time    : 59.88 MHz ( period = 16.700 ns )
+From           : KoK
 To             : KeyCode[3]~reg0
 From Clock     : GCKP43
 To Clock       : GCKP43

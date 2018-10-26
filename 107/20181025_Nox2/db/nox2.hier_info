@@ -1,0 +1,36 @@
+|nox2
+GCKP43 => freq[0].CLK
+GCKP43 => freq[1].CLK
+GCKP43 => freq[2].CLK
+GCKP43 => freq[3].CLK
+GCKP43 => freq[4].CLK
+GCKP43 => freq[5].CLK
+GCKP43 => freq[6].CLK
+GCKP43 => freq[7].CLK
+GCKP43 => freq[8].CLK
+GCKP43 => freq[9].CLK
+GCKP43 => freq[10].CLK
+GCKP43 => freq[11].CLK
+GCKP43 => freq[12].CLK
+GCKP43 => freq[13].CLK
+GCKP43 => freq[14].CLK
+GCKP43 => freq[15].CLK
+p13co => ~NO_FANOUT~
+p14co => ~NO_FANOUT~
+DCBA[0] <= <GND>
+DCBA[1] <= <GND>
+DCBA[2] <= <GND>
+DCBA[3] <= <GND>
+keyScan[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+keyScan[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+keyScan[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+keyScan[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+keyIn[0] => ~NO_FANOUT~
+keyIn[1] => ~NO_FANOUT~
+keyIn[2] => ~NO_FANOUT~
+p1stop <= comb.DB_MAX_OUTPUT_PORT_TYPE
+pe10 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+pe0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+p12led <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

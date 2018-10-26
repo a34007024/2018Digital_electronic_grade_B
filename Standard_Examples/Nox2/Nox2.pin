@@ -65,46 +65,46 @@ CHIP  "Nox2"  ASSIGNED TO AN: EPM3064ALC44-10
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 GND+                         : 1         :        :                   :         :           :                
-P13Co                        : 2         : input  : 3.3-V LVTTL       :         :           : N              
+GND+                         : 2         :        :                   :         :           :                
 VCCINT                       : 3         : power  :                   : 3.3V    :           :                
-KeyScan[1]                   : 4         : output : 3.3-V LVTTL       :         :           : N              
-KeyScan[2]                   : 5         : output : 3.3-V LVTTL       :         :           : N              
-KeyScan[0]                   : 6         : output : 3.3-V LVTTL       :         :           : N              
+PE[0]                        : 4         : output : 3.3-V LVTTL       :         :           : Y              
+KeyScan[2]                   : 5         : output : 3.3-V LVTTL       :         :           : Y              
+KeyScan[0]                   : 6         : output : 3.3-V LVTTL       :         :           : Y              
 TDI                          : 7         : input  : 3.3-V LVTTL       :         :           : N              
-KeyScan[3]                   : 8         : output : 3.3-V LVTTL       :         :           : N              
-KeyIn[1]                     : 9         : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 8         :        :                   :         :           :                
+RESERVED                     : 9         :        :                   :         :           :                
 GND                          : 10        : gnd    :                   :         :           :                
-KeyIn[2]                     : 11        : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 11        :        :                   :         :           :                
 RESERVED                     : 12        :        :                   :         :           :                
 TMS                          : 13        : input  : 3.3-V LVTTL       :         :           : N              
 RESERVED                     : 14        :        :                   :         :           :                
 VCCIO                        : 15        : power  :                   : 3.3V    :           :                
 RESERVED                     : 16        :        :                   :         :           :                
 GND                          : 17        : gnd    :                   :         :           :                
-KeyIn[0]                     : 18        : input  : 3.3-V LVTTL       :         :           : N              
-RESERVED                     : 19        :        :                   :         :           :                
-RESERVED                     : 20        :        :                   :         :           :                
-P1STOP                       : 21        : output : 3.3-V LVTTL       :         :           : N              
+P13Co                        : 18        : input  : 3.3-V LVTTL       :         :           : Y              
+P14Co                        : 19        : input  : 3.3-V LVTTL       :         :           : Y              
+KeyScan[3]                   : 20        : output : 3.3-V LVTTL       :         :           : Y              
+KeyScan[1]                   : 21        : output : 3.3-V LVTTL       :         :           : Y              
 GND                          : 22        : gnd    :                   :         :           :                
 VCCINT                       : 23        : power  :                   : 3.3V    :           :                
 RESERVED                     : 24        :        :                   :         :           :                
-KeyCode[0]                   : 25        : output : 3.3-V LVTTL       :         :           : N              
-KeyCode[1]                   : 26        : output : 3.3-V LVTTL       :         :           : N              
-KeyCode[2]                   : 27        : output : 3.3-V LVTTL       :         :           : N              
-KeyCode[3]                   : 28        : output : 3.3-V LVTTL       :         :           : N              
-PE[0]                        : 29        : output : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 25        :        :                   :         :           :                
+KeyCode[3]                   : 26        : output : 3.3-V LVTTL       :         :           : Y              
+KeyCode[0]                   : 27        : output : 3.3-V LVTTL       :         :           : Y              
+PE[1]                        : 28        : output : 3.3-V LVTTL       :         :           : Y              
+KeyIn[2]                     : 29        : input  : 3.3-V LVTTL       :         :           : Y              
 GND                          : 30        : gnd    :                   :         :           :                
-PE[1]                        : 31        : output : 3.3-V LVTTL       :         :           : N              
+KeyCode[1]                   : 31        : output : 3.3-V LVTTL       :         :           : Y              
 TCK                          : 32        : input  : 3.3-V LVTTL       :         :           : N              
-RESERVED                     : 33        :        :                   :         :           :                
-RESERVED                     : 34        :        :                   :         :           :                
+KeyIn[1]                     : 33        : input  : 3.3-V LVTTL       :         :           : Y              
+KeyCode[2]                   : 34        : output : 3.3-V LVTTL       :         :           : Y              
 VCCIO                        : 35        : power  :                   : 3.3V    :           :                
 GND                          : 36        : gnd    :                   :         :           :                
-RESERVED                     : 37        :        :                   :         :           :                
+KeyIn[0]                     : 37        : input  : 3.3-V LVTTL       :         :           : Y              
 TDO                          : 38        : output : 3.3-V LVTTL       :         :           : N              
-RESERVED                     : 39        :        :                   :         :           :                
+P1STOP                       : 39        : output : 3.3-V LVTTL       :         :           : Y              
 RESERVED                     : 40        :        :                   :         :           :                
-P14Co                        : 41        : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 41        :        :                   :         :           :                
 GND                          : 42        : gnd    :                   :         :           :                
-GCKP43                       : 43        : input  : 3.3-V LVTTL       :         :           : N              
+GCKP43                       : 43        : input  : 3.3-V LVTTL       :         :           : Y              
 GND+                         : 44        :        :                   :         :           :                

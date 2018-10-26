@@ -4,22 +4,41 @@ use IEEE.std_logic_unsigned.all;
 --==================================
 entity nox2 is
 	port(
-		GCKP43,P13co,P14co:in std_logic;
-		D,C,B,A:out integer range 0 to 15;
+		GCKP43,p13co,p14co:in std_logic;
+		DCBA:out integer range 0 to 15:=0;
+		keyScan:out std_logic_vector(3 downto 0);
+		keyIn:in std_logic_vector(2 downto 0);
+		p1stop,pe10,pe0,p12led:out std_logic
 	);
 end entity;
 --==================================
 architecture main of nox2 is
 signal freq:std_logic_vector(15 downto 0);
-
+signal kclk:std_logic;
+signal keyCode:integer range 0 to 9:=0;
+signal keyScanSignal:integer range 0 to 3:=0;
 begin
+	DCBA <= keyCode;
+	kclk <= freq(12); --1/2048 MHZ
 	process(GCKP43)
 	begin
 		if rising_edge(GCKP43)	then
 			freq <= freq + 1;
 		end if;
-		
+		if freq(0) = '1' then--2MHZ
+			if keyScanSignal = 3 then
+				keyScanSignal <= 0;
+			else 
+				keyScanSignal <= keyScanSignal + 1;
+			end if;
+		end if;
 	end process;
+	
+	with keyScanSignal select
+		keyScan <= 	"0111" when 3,
+					"1011" when 2,
+					"1101" when 1,
+					"1110" when others;
 end architecture;
 
 

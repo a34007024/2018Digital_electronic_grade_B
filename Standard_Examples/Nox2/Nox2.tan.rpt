@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for Nox2
-Mon Apr 30 09:48:52 2018
+Fri Oct 26 11:56:56 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                         ;
-+------------------------------+-------+---------------+----------------------------------+------------------------------+-----------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time                      ; From                         ; To              ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+----------------------------------+------------------------------+-----------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 6.200 ns                         ; P14Co                        ; P14P13CoS[0]    ; --         ; GCKP43   ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 13.800 ns                        ; P14P13CoS[1]                 ; P1STOP          ; GCKP43     ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; 4.400 ns                         ; KeyIn[1]                     ; Ko[0]           ; --         ; GCKP43   ; 0            ;
-; Clock Setup: 'GCKP43'        ; N/A   ; None          ; 60.24 MHz ( period = 16.600 ns ) ; lpm_counter:KN_rtl_1|dffs[3] ; KeyCode[3]~reg0 ; GCKP43     ; GCKP43   ; 0            ;
-; Total number of failed paths ;       ;               ;                                  ;                              ;                 ;            ;          ; 0            ;
-+------------------------------+-------+---------------+----------------------------------+------------------------------+-----------------+------------+----------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                         ;
++------------------------------+-------+---------------+----------------------------------+--------------+-----------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From         ; To              ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------------+-----------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.200 ns                         ; P14Co        ; P14P13CoS[0]    ; --         ; GCKP43   ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 13.800 ns                        ; P14P13CoS[1] ; P1STOP          ; GCKP43     ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 4.400 ns                         ; KeyIn[1]     ; Ko[0]           ; --         ; GCKP43   ; 0            ;
+; Clock Setup: 'GCKP43'        ; N/A   ; None          ; 59.88 MHz ( period = 16.700 ns ) ; KoK          ; KeyCode[3]~reg0 ; GCKP43     ; GCKP43   ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;              ;                 ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------------+-----------------+------------+----------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -110,24 +110,31 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+-----------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack ; Actual fmax (period)              ; From                         ; To                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-------+-----------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 59.88 MHz ( period = 16.700 ns )  ; KoK                          ; K_RESET                      ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 59.88 MHz ( period = 16.700 ns )  ; KoK                          ; PES[0]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 59.88 MHz ( period = 16.700 ns )  ; KoK                          ; PES[1]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 59.88 MHz ( period = 16.700 ns )  ; KoK                          ; KeyCode[0]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 59.88 MHz ( period = 16.700 ns )  ; KoK                          ; KeyCode[1]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 59.88 MHz ( period = 16.700 ns )  ; KoK                          ; KeyCode[2]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 59.88 MHz ( period = 16.700 ns )  ; KoK                          ; KeyCode[3]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
 ; N/A   ; 60.24 MHz ( period = 16.600 ns )  ; lpm_counter:KN_rtl_1|dffs[0] ; KeyCode[0]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 60.24 MHz ( period = 16.600 ns )  ; lpm_counter:KN_rtl_1|dffs[1] ; KeyCode[1]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 60.24 MHz ( period = 16.600 ns )  ; lpm_counter:KN_rtl_1|dffs[2] ; KeyCode[2]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 60.24 MHz ( period = 16.600 ns )  ; lpm_counter:KN_rtl_1|dffs[3] ; KeyCode[3]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 60.61 MHz ( period = 16.500 ns )  ; KoK                          ; K_RESET                      ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 60.61 MHz ( period = 16.500 ns )  ; KoK                          ; PES[0]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 60.61 MHz ( period = 16.500 ns )  ; KoK                          ; PES[1]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 60.61 MHz ( period = 16.500 ns )  ; KoK                          ; KeyCode[0]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 60.61 MHz ( period = 16.500 ns )  ; KoK                          ; KeyCode[1]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 60.61 MHz ( period = 16.500 ns )  ; KoK                          ; KeyCode[2]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 60.61 MHz ( period = 16.500 ns )  ; KoK                          ; KeyCode[3]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
+; N/A   ; 71.43 MHz ( period = 14.000 ns )  ; I[0]                         ; Ko[1]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 9.500 ns                ;
+; N/A   ; 71.43 MHz ( period = 14.000 ns )  ; KS                           ; Ko[1]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 9.500 ns                ;
+; N/A   ; 71.43 MHz ( period = 14.000 ns )  ; I[1]                         ; Ko[1]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 9.500 ns                ;
+; N/A   ; 71.43 MHz ( period = 14.000 ns )  ; Ko[1]                        ; Ko[1]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 9.500 ns                ;
+; N/A   ; 71.43 MHz ( period = 14.000 ns )  ; Ko[0]                        ; Ko[1]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 9.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; KS                           ; lpm_counter:KN_rtl_1|dffs[0] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[1]                         ; lpm_counter:KN_rtl_1|dffs[0] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
+; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; Ko[3]                        ; I[0]                         ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; KS                           ; I[0]                         ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[1]                         ; I[0]                         ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[0]                         ; Ko[3]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; KS                           ; Ko[3]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[1]                         ; Ko[3]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
+; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; Ko[2]                        ; Ko[3]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; lpm_counter:KN_rtl_1|dffs[0] ; lpm_counter:KN_rtl_1|dffs[3] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; KS                           ; lpm_counter:KN_rtl_1|dffs[3] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[1]                         ; lpm_counter:KN_rtl_1|dffs[3] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
@@ -143,36 +150,43 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[0]                         ; Ko[2]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; KS                           ; Ko[2]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[1]                         ; Ko[2]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
-; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[0]                         ; Ko[1]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
-; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; KS                           ; Ko[1]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
-; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[1]                         ; Ko[1]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
+; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; Ko[1]                        ; Ko[2]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[0]                         ; Ko[0]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
+; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; Ko[3]                        ; Ko[0]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; KS                           ; Ko[0]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
 ; N/A   ; 90.91 MHz ( period = 11.000 ns )  ; I[1]                         ; Ko[0]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.500 ns                ;
-; N/A   ; 91.74 MHz ( period = 10.900 ns )  ; Ko[3]                        ; I[0]                         ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.400 ns                ;
-; N/A   ; 91.74 MHz ( period = 10.900 ns )  ; Ko[2]                        ; Ko[3]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.400 ns                ;
-; N/A   ; 91.74 MHz ( period = 10.900 ns )  ; Ko[1]                        ; Ko[2]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.400 ns                ;
-; N/A   ; 91.74 MHz ( period = 10.900 ns )  ; Ko[0]                        ; Ko[1]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.400 ns                ;
-; N/A   ; 91.74 MHz ( period = 10.900 ns )  ; Ko[3]                        ; Ko[0]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 6.400 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[1]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[2]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[3]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[4]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[5]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[6]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[7]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[8]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[9]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[10] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[11] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[12] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[13] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[1]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[2]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[3]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[4]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[5]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[6]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[7]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[8]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[9]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[10] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[11] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[12] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[13] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; KoK                          ; KoK                          ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; MS                           ; PES[0]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; MS                           ; PES[1]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; KeyCode[0]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; MS                           ; KeyCode[0]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; KeyCode[1]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; MS                           ; KeyCode[1]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; KeyCode[2]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; MS                           ; KeyCode[2]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; KeyCode[3]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 98.04 MHz ( period = 10.200 ns )  ; MS                           ; KeyCode[3]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.700 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; I[0]                         ; lpm_counter:KN_rtl_1|dffs[0] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; I[0]                         ; I[0]                         ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; Ko[3]                        ; Ko[3]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; I[0]                         ; KS                           ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; KS                           ; KS                           ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; I[1]                         ; KS                           ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; I[0]                         ; I[1]                         ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; Ko[3]                        ; I[1]                         ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; KS                           ; I[1]                         ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; I[1]                         ; I[1]                         ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; I[0]                         ; lpm_counter:KN_rtl_1|dffs[3] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
@@ -180,10 +194,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; I[0]                         ; lpm_counter:KN_rtl_1|dffs[1] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; K_RESET                      ; K_RESET                      ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; KS                           ; KoK                          ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; KeyCode[0]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; KeyCode[1]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; KeyCode[2]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
-; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; KeyCode[3]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; Ko[2]                        ; Ko[2]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 99.01 MHz ( period = 10.100 ns )  ; Ko[0]                        ; Ko[0]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.600 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; lpm_counter:F_rtl_0|dffs[0]  ; lpm_counter:F_rtl_0|dffs[0]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; P14P13CoS[0]                 ; P14P13CoS[1]                 ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; lpm_counter:F_rtl_0|dffs[1]  ; lpm_counter:F_rtl_0|dffs[1]  ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
@@ -278,36 +290,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; lpm_counter:F_rtl_0|dffs[12] ; lpm_counter:F_rtl_0|dffs[13] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; lpm_counter:F_rtl_0|dffs[13] ; lpm_counter:F_rtl_0|dffs[13] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; lpm_counter:KN_rtl_1|dffs[0] ; lpm_counter:KN_rtl_1|dffs[0] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; Ko[3]                        ; Ko[3]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; Ko[3]                        ; I[1]                         ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; lpm_counter:KN_rtl_1|dffs[3] ; lpm_counter:KN_rtl_1|dffs[3] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; lpm_counter:KN_rtl_1|dffs[2] ; lpm_counter:KN_rtl_1|dffs[2] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; lpm_counter:KN_rtl_1|dffs[1] ; lpm_counter:KN_rtl_1|dffs[1] ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; PES[0]                       ; K_RESET                      ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; PES[1]                       ; K_RESET                      ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; KoK                          ; KoK                          ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; MS                           ; PES[0]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; PES[0]                       ; PES[0]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; PES[1]                       ; PES[0]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; MS                           ; PES[1]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; Ko[2]                        ; Ko[2]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; Ko[1]                        ; Ko[1]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; Ko[0]                        ; Ko[0]                        ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; MS                           ; KeyCode[0]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; KeyCode[0]~reg0              ; KeyCode[0]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; MS                           ; KeyCode[1]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; KeyCode[1]~reg0              ; KeyCode[1]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; MS                           ; KeyCode[2]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; KeyCode[2]~reg0              ; KeyCode[2]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; MS                           ; KeyCode[3]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
 ; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; KeyCode[3]~reg0              ; KeyCode[3]~reg0              ; GCKP43     ; GCKP43   ; None                        ; None                      ; 5.500 ns                ;
-; N/A   ; 123.46 MHz ( period = 8.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; MS                           ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.600 ns                ;
-; N/A   ; 123.46 MHz ( period = 8.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; K_RESET                      ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.600 ns                ;
-; N/A   ; 123.46 MHz ( period = 8.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; PES[0]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.600 ns                ;
-; N/A   ; 123.46 MHz ( period = 8.100 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; PES[1]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.600 ns                ;
+; N/A   ; 121.95 MHz ( period = 8.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; MS                           ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.700 ns                ;
+; N/A   ; 121.95 MHz ( period = 8.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; K_RESET                      ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.700 ns                ;
+; N/A   ; 121.95 MHz ( period = 8.200 ns )  ; MS                           ; K_RESET                      ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.700 ns                ;
+; N/A   ; 121.95 MHz ( period = 8.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; PES[0]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.700 ns                ;
+; N/A   ; 121.95 MHz ( period = 8.200 ns )  ; lpm_counter:F_rtl_0|dffs[0]  ; PES[1]                       ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.700 ns                ;
 ; N/A   ; 125.00 MHz ( period = 8.000 ns )  ; P14P13CoS[0]                 ; MS                           ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.500 ns                ;
 ; N/A   ; 125.00 MHz ( period = 8.000 ns )  ; P14P13CoS[1]                 ; MS                           ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.500 ns                ;
-; N/A   ; 125.00 MHz ( period = 8.000 ns )  ; MS                           ; K_RESET                      ; GCKP43     ; GCKP43   ; None                        ; None                      ; 3.500 ns                ;
 +-------+-----------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
@@ -318,6 +318,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+----------+------------------------------+----------+
 ; N/A   ; None         ; 6.200 ns   ; P13Co    ; P14P13CoS[0]                 ; GCKP43   ;
 ; N/A   ; None         ; 6.200 ns   ; P14Co    ; P14P13CoS[0]                 ; GCKP43   ;
+; N/A   ; None         ; 3.700 ns   ; KeyIn[2] ; Ko[1]                        ; GCKP43   ;
+; N/A   ; None         ; 3.700 ns   ; KeyIn[0] ; Ko[1]                        ; GCKP43   ;
+; N/A   ; None         ; 3.700 ns   ; KeyIn[1] ; Ko[1]                        ; GCKP43   ;
 ; N/A   ; None         ; 0.700 ns   ; KeyIn[2] ; lpm_counter:KN_rtl_1|dffs[0] ; GCKP43   ;
 ; N/A   ; None         ; 0.700 ns   ; KeyIn[2] ; I[0]                         ; GCKP43   ;
 ; N/A   ; None         ; 0.700 ns   ; KeyIn[2] ; lpm_counter:KN_rtl_1|dffs[3] ; GCKP43   ;
@@ -327,12 +330,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A   ; None         ; 0.700 ns   ; KeyIn[0] ; Ko[0]                        ; GCKP43   ;
 ; N/A   ; None         ; 0.700 ns   ; KeyIn[1] ; Ko[3]                        ; GCKP43   ;
 ; N/A   ; None         ; 0.700 ns   ; KeyIn[1] ; Ko[2]                        ; GCKP43   ;
-; N/A   ; None         ; 0.700 ns   ; KeyIn[1] ; Ko[1]                        ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[2] ; Ko[3]                        ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[2] ; KS                           ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[2] ; KoK                          ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[2] ; Ko[2]                        ; GCKP43   ;
-; N/A   ; None         ; -0.200 ns  ; KeyIn[2] ; Ko[1]                        ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[0] ; lpm_counter:KN_rtl_1|dffs[0] ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[0] ; I[0]                         ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[0] ; Ko[3]                        ; GCKP43   ;
@@ -342,7 +343,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[0] ; lpm_counter:KN_rtl_1|dffs[1] ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[0] ; KoK                          ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[0] ; Ko[2]                        ; GCKP43   ;
-; N/A   ; None         ; -0.200 ns  ; KeyIn[0] ; Ko[1]                        ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[1] ; lpm_counter:KN_rtl_1|dffs[0] ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[1] ; I[0]                         ; GCKP43   ;
 ; N/A   ; None         ; -0.200 ns  ; KeyIn[1] ; KS                           ; GCKP43   ;
@@ -384,7 +384,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[2] ; KS                           ; GCKP43   ;
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[2] ; KoK                          ; GCKP43   ;
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[2] ; Ko[2]                        ; GCKP43   ;
-; N/A           ; None        ; 4.400 ns  ; KeyIn[2] ; Ko[1]                        ; GCKP43   ;
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[0] ; lpm_counter:KN_rtl_1|dffs[0] ; GCKP43   ;
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[0] ; I[0]                         ; GCKP43   ;
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[0] ; Ko[3]                        ; GCKP43   ;
@@ -394,7 +393,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[0] ; lpm_counter:KN_rtl_1|dffs[1] ; GCKP43   ;
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[0] ; KoK                          ; GCKP43   ;
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[0] ; Ko[2]                        ; GCKP43   ;
-; N/A           ; None        ; 4.400 ns  ; KeyIn[0] ; Ko[1]                        ; GCKP43   ;
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[1] ; lpm_counter:KN_rtl_1|dffs[0] ; GCKP43   ;
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[1] ; I[0]                         ; GCKP43   ;
 ; N/A           ; None        ; 4.400 ns  ; KeyIn[1] ; KS                           ; GCKP43   ;
@@ -413,7 +411,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A           ; None        ; 3.500 ns  ; KeyIn[0] ; Ko[0]                        ; GCKP43   ;
 ; N/A           ; None        ; 3.500 ns  ; KeyIn[1] ; Ko[3]                        ; GCKP43   ;
 ; N/A           ; None        ; 3.500 ns  ; KeyIn[1] ; Ko[2]                        ; GCKP43   ;
-; N/A           ; None        ; 3.500 ns  ; KeyIn[1] ; Ko[1]                        ; GCKP43   ;
+; N/A           ; None        ; 0.500 ns  ; KeyIn[2] ; Ko[1]                        ; GCKP43   ;
+; N/A           ; None        ; 0.500 ns  ; KeyIn[0] ; Ko[1]                        ; GCKP43   ;
+; N/A           ; None        ; 0.500 ns  ; KeyIn[1] ; Ko[1]                        ; GCKP43   ;
 ; N/A           ; None        ; -2.000 ns ; P13Co    ; P14P13CoS[0]                 ; GCKP43   ;
 ; N/A           ; None        ; -2.000 ns ; P14Co    ; P14P13CoS[0]                 ; GCKP43   ;
 +---------------+-------------+-----------+----------+------------------------------+----------+
@@ -425,7 +425,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Apr 30 09:48:52 2018
+    Info: Processing started: Fri Oct 26 11:56:56 2018
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Nox2 -c Nox2
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
@@ -434,64 +434,64 @@ Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "GCKP43" is an undefined clock
 Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
     Info: Detected ripple clock "lpm_counter:F_rtl_0|dffs[13]" as buffer
-Info: Clock "GCKP43" has Internal fmax of 60.24 MHz between source register "lpm_counter:KN_rtl_1|dffs[0]" and destination register "KeyCode[0]~reg0" (period= 16.6 ns)
-    Info: + Longest register to register delay is 5.600 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC2; Fanout = 16; REG Node = 'lpm_counter:KN_rtl_1|dffs[0]'
-        Info: 2: + IC(2.400 ns) + CELL(3.200 ns) = 5.600 ns; Loc. = LC35; Fanout = 3; REG Node = 'KeyCode[0]~reg0'
-        Info: Total cell delay = 3.200 ns ( 57.14 % )
-        Info: Total interconnect delay = 2.400 ns ( 42.86 % )
+Info: Clock "GCKP43" has Internal fmax of 59.88 MHz between source register "KoK" and destination register "K_RESET" (period= 16.7 ns)
+    Info: + Longest register to register delay is 5.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC4; Fanout = 15; REG Node = 'KoK'
+        Info: 2: + IC(2.500 ns) + CELL(3.200 ns) = 5.700 ns; Loc. = LC8; Fanout = 5; REG Node = 'K_RESET'
+        Info: Total cell delay = 3.200 ns ( 56.14 % )
+        Info: Total interconnect delay = 2.500 ns ( 43.86 % )
     Info: - Smallest clock skew is -6.500 ns
         Info: + Shortest clock path from clock "GCKP43" to destination register is 3.600 ns
             Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_43; Fanout = 24; CLK Node = 'GCKP43'
-            Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.600 ns; Loc. = LC35; Fanout = 3; REG Node = 'KeyCode[0]~reg0'
+            Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.600 ns; Loc. = LC8; Fanout = 5; REG Node = 'K_RESET'
             Info: Total cell delay = 3.600 ns ( 100.00 % )
         Info: - Longest clock path from clock "GCKP43" to source register is 10.100 ns
             Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_43; Fanout = 24; CLK Node = 'GCKP43'
-            Info: 2: + IC(0.000 ns) + CELL(2.900 ns) = 5.200 ns; Loc. = LC18; Fanout = 13; REG Node = 'lpm_counter:F_rtl_0|dffs[13]'
-            Info: 3: + IC(2.400 ns) + CELL(2.500 ns) = 10.100 ns; Loc. = LC2; Fanout = 16; REG Node = 'lpm_counter:KN_rtl_1|dffs[0]'
+            Info: 2: + IC(0.000 ns) + CELL(2.900 ns) = 5.200 ns; Loc. = LC50; Fanout = 13; REG Node = 'lpm_counter:F_rtl_0|dffs[13]'
+            Info: 3: + IC(2.400 ns) + CELL(2.500 ns) = 10.100 ns; Loc. = LC4; Fanout = 15; REG Node = 'KoK'
             Info: Total cell delay = 7.700 ns ( 76.24 % )
             Info: Total interconnect delay = 2.400 ns ( 23.76 % )
     Info: + Micro clock to output delay of source is 1.600 ns
     Info: + Micro setup delay of destination is 2.900 ns
 Info: tsu for register "P14P13CoS[0]" (data pin = "P13Co", clock pin = "GCKP43") is 6.200 ns
     Info: + Longest pin to register delay is 6.900 ns
-        Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_2; Fanout = 1; PIN Node = 'P13Co'
-        Info: 2: + IC(1.400 ns) + CELL(3.200 ns) = 6.900 ns; Loc. = LC48; Fanout = 3; REG Node = 'P14P13CoS[0]'
-        Info: Total cell delay = 5.500 ns ( 79.71 % )
-        Info: Total interconnect delay = 1.400 ns ( 20.29 % )
+        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_18; Fanout = 1; PIN Node = 'P13Co'
+        Info: 2: + IC(2.300 ns) + CELL(3.200 ns) = 6.900 ns; Loc. = LC2; Fanout = 3; REG Node = 'P14P13CoS[0]'
+        Info: Total cell delay = 4.600 ns ( 66.67 % )
+        Info: Total interconnect delay = 2.300 ns ( 33.33 % )
     Info: + Micro setup delay of destination is 2.900 ns
     Info: - Shortest clock path from clock "GCKP43" to destination register is 3.600 ns
         Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_43; Fanout = 24; CLK Node = 'GCKP43'
-        Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.600 ns; Loc. = LC48; Fanout = 3; REG Node = 'P14P13CoS[0]'
+        Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.600 ns; Loc. = LC2; Fanout = 3; REG Node = 'P14P13CoS[0]'
         Info: Total cell delay = 3.600 ns ( 100.00 % )
 Info: tco from clock "GCKP43" to destination pin "P1STOP" through register "P14P13CoS[0]" is 13.800 ns
     Info: + Longest clock path from clock "GCKP43" to source register is 3.600 ns
         Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_43; Fanout = 24; CLK Node = 'GCKP43'
-        Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.600 ns; Loc. = LC48; Fanout = 3; REG Node = 'P14P13CoS[0]'
+        Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.600 ns; Loc. = LC2; Fanout = 3; REG Node = 'P14P13CoS[0]'
         Info: Total cell delay = 3.600 ns ( 100.00 % )
     Info: + Micro clock to output delay of source is 1.600 ns
     Info: + Longest register to pin delay is 8.600 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC48; Fanout = 3; REG Node = 'P14P13CoS[0]'
-        Info: 2: + IC(2.300 ns) + CELL(4.500 ns) = 6.800 ns; Loc. = LC17; Fanout = 1; COMB Node = 'P1~3'
-        Info: 3: + IC(0.000 ns) + CELL(1.800 ns) = 8.600 ns; Loc. = PIN_21; Fanout = 0; PIN Node = 'P1STOP'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC2; Fanout = 3; REG Node = 'P14P13CoS[0]'
+        Info: 2: + IC(2.300 ns) + CELL(4.500 ns) = 6.800 ns; Loc. = LC57; Fanout = 1; COMB Node = 'P1~3'
+        Info: 3: + IC(0.000 ns) + CELL(1.800 ns) = 8.600 ns; Loc. = PIN_39; Fanout = 0; PIN Node = 'P1STOP'
         Info: Total cell delay = 6.300 ns ( 73.26 % )
         Info: Total interconnect delay = 2.300 ns ( 26.74 % )
 Info: th for register "Ko[3]" (data pin = "KeyIn[2]", clock pin = "GCKP43") is 4.400 ns
     Info: + Longest clock path from clock "GCKP43" to destination register is 10.100 ns
         Info: 1: + IC(0.000 ns) + CELL(2.300 ns) = 2.300 ns; Loc. = PIN_43; Fanout = 24; CLK Node = 'GCKP43'
-        Info: 2: + IC(0.000 ns) + CELL(2.900 ns) = 5.200 ns; Loc. = LC18; Fanout = 13; REG Node = 'lpm_counter:F_rtl_0|dffs[13]'
-        Info: 3: + IC(2.400 ns) + CELL(2.500 ns) = 10.100 ns; Loc. = LC5; Fanout = 12; REG Node = 'Ko[3]'
+        Info: 2: + IC(0.000 ns) + CELL(2.900 ns) = 5.200 ns; Loc. = LC50; Fanout = 13; REG Node = 'lpm_counter:F_rtl_0|dffs[13]'
+        Info: 3: + IC(2.400 ns) + CELL(2.500 ns) = 10.100 ns; Loc. = LC19; Fanout = 12; REG Node = 'Ko[3]'
         Info: Total cell delay = 7.700 ns ( 76.24 % )
         Info: Total interconnect delay = 2.400 ns ( 23.76 % )
     Info: + Micro hold delay of destination is 1.300 ns
     Info: - Shortest pin to register delay is 7.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_11; Fanout = 11; PIN Node = 'KeyIn[2]'
-        Info: 2: + IC(2.400 ns) + CELL(3.200 ns) = 7.000 ns; Loc. = LC5; Fanout = 12; REG Node = 'Ko[3]'
+        Info: 1: + IC(0.000 ns) + CELL(1.400 ns) = 1.400 ns; Loc. = PIN_29; Fanout = 11; PIN Node = 'KeyIn[2]'
+        Info: 2: + IC(2.400 ns) + CELL(3.200 ns) = 7.000 ns; Loc. = LC19; Fanout = 12; REG Node = 'Ko[3]'
         Info: Total cell delay = 4.600 ns ( 65.71 % )
         Info: Total interconnect delay = 2.400 ns ( 34.29 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 221 megabytes
-    Info: Processing ended: Mon Apr 30 09:48:52 2018
+    Info: Peak virtual memory: 200 megabytes
+    Info: Processing ended: Fri Oct 26 11:56:56 2018
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
